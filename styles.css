@@ -1,0 +1,187 @@
+body {
+    background-color: black;
+}
+
+:root {
+    --x_deg_sec: 0deg;
+    --x_deg_min: 0deg;
+    --x_deg_hour: 0deg;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+.circle {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 2px solid white;
+    border-radius: 100%;
+    margin: auto;
+}
+
+.hour-unit-1 {
+    position: absolute;
+    height: 20px;
+    width: 3px;
+    background-color: white;
+    top: 0px;
+    left: 50%;
+    transform: translateY(-50%, 50%)
+}
+.hour-unit-2 {
+    position: absolute;
+    height: 20px;
+    width: 3px;
+    background-color: white;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%, -50%)
+     
+   
+}
+.hour-unit-3 {
+    position: absolute;
+    height: 20px;
+    width: 3px;
+    background-color: rgb(255, 255, 255);
+    top: 50%;
+    left: 0px;
+    transform: rotate(90deg) translateY(-50%);
+
+   
+}
+.hour-unit-4 {
+    position: absolute;
+    height: 20px;
+    width: 3px;
+    background-color: rgb(255, 255, 255);
+    top: 50%;
+    right: 20px;
+    transform: rotate(90deg) translateY(-50%);
+}
+
+.tick-second, .tick-minute, .tick-hour {
+    position: absolute;
+    height: 30%;
+    width: 5px;
+    left: calc(50% + 1.5px) ;
+    top: 90px;
+    transform-origin: bottom center;
+   
+}
+
+.tick-hour {
+background-color: white;
+transform: translateX(-50%) rotate(var(--x_deg_hour));
+z-index: 9;
+}
+.tick-minute{
+    background-color: aqua;
+    transform: translateX(-50%) rotate(var(--x_deg_min));
+    z-index: 10;
+}
+
+.tick-second{
+    
+    background-color: green;
+    transform: translateX(-50%) rotate(var(--x_deg_sec));
+    z-index: 11;
+}
+
+.inner-circle {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 53%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    background-image: radial-gradient(white 5%, aqua 15%, green 60%);
+    border-radius: 100%;
+    z-index: 99;
+    border: 1px solid gray;
+    
+}
+
+/* analog clock real */
+
+#clock-container {
+    margin: auto;
+    width: 500px;
+   background: url('/img/vecteezy_dark-vintage-blue-texture-background_38287848.jpg');
+    height: 500px;
+}
+
+#clock-frame {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: url("/img/vintage-clock-face-clock-faces-115632339022fayorplt1__1_-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#second {
+    position: absolute;
+    height: 26%;
+    width: 8px;
+    background-color: rgb(16, 13, 13);
+    left: 51%;
+    top: 37%;
+    transform: translate(-50%, -50%);
+    transform-origin: center bottom;
+    z-index: 33;
+    border-radius: 10px;
+    border: 0.5px solid white;
+    z-index: 88;
+}
+
+#minute {
+    position: absolute;
+    height: 23%;
+    width: 12px;
+    background-color: rgb(16, 13, 13);
+    left: 51%;
+    top: 38.5%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    transform-origin: center bottom;
+    z-index: 33;
+    border-radius: 10px;
+    border: 0.5px solid white;
+    z-index: 77;
+
+}
+
+#hour {
+
+    position: absolute;
+    height: 18%;
+    width: 16px;
+    background-color: rgb(16, 13, 13);
+    left: 51%;
+    top: 41.5%;
+    transform: translate(-50%, -50%);
+    transform-origin: center bottom;
+    z-index: 33;
+    border-radius: 10px;
+    border: 0.5px solid rgb(255, 255, 255);
+   z-index: 66;
+
+}
+
+#inner-circle {
+    position:absolute;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(10, 7, 7);
+    left: 51%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    border-radius: 100%;
+
+}
