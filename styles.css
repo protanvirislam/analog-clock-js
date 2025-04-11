@@ -112,7 +112,7 @@ z-index: 9;
 #clock-container {
     margin: auto;
     width: 500px;
-   background: url('/img/vecteezy_dark-vintage-blue-texture-background_38287848.jpg');
+   background: url('./img/vecteezy_dark-vintage-blue-texture-background_38287848.jpg');
     height: 500px;
 }
 
@@ -120,7 +120,7 @@ z-index: 9;
     position: relative;
     height: 100%;
     width: 100%;
-    background: url("/img/vintage-clock-face-clock-faces-115632339022fayorplt1__1_-removebg-preview.png");
+    background: url("./img/vintage-clock-face-clock-faces-115632339022fayorplt1__1_-removebg-preview.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
